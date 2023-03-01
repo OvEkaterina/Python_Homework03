@@ -6,3 +6,14 @@
 # 5
 #     1 2 3 4 5    6
 #     -> 5
+list= []
+print("Введите количество эллментов массива :")
+n = int(input())
+from random import randint
+for i in range(n):
+   list.append(randint(1, n)) 
+print(list)
+print("Введите значение х :")
+x = int(input())
+list_new =[abs(x-i) for i in list]
+print(list[list_new.index(min(list_new))])
